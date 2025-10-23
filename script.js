@@ -442,29 +442,6 @@ function animateCounters() {
 animateCounters();
 
 // Mobile menu toggle (if needed)
-function createMobileMenu() {
-    const mobileMenuBtn = document.createElement('button');
-    mobileMenuBtn.className = 'mobile-menu-btn';
-    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-    
-    const mobileMenu = document.createElement('div');
-    mobileMenu.className = 'mobile-menu';
-    mobileMenu.innerHTML = `
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#works">Works</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    `;
-    
-    document.body.appendChild(mobileMenuBtn);
-    document.body.appendChild(mobileMenu);
-    
-    mobileMenuBtn.addEventListener('click', function() {
-        mobileMenu.classList.toggle('active');
-        this.classList.toggle('active');
-    });
-}
 
 // Initialize mobile menu for small screens
 if (window.innerWidth <= 768) {
